@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+<div class="container">
+    <h1 class="text-center mb-150px">Walcome to the Rigel Campground</h1>
+    <div class="row">
+        <%camps.forEach(function(camp){ %>
+        <div class="img-thumbnail"style="width:33%; display:inline-block;">
+            <p class="text-center"><%= camp.name %></p> 
+            <img style="width:99%; height:200px;" src="<%= camp.image %>">
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
