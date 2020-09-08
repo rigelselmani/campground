@@ -5,9 +5,10 @@
         <%camps.forEach(function(camp){ %>
             <div class="col-lg-3 col-md-6" style="margin-bottom:20px;">
                 <div class=" img-thumbnail text-center">
-                    <img style="width:99%; height:200px;" src="<%= camp.image %>">
-                    <div class="caption">
+                    <img src="<%= camp.image %>">
+                    <div class=".caption">
                         <p><%= camp.name %></p> 
+                        <p><%=camp.description.substring(0, 30)%><a href="/campgrounds/<%=camp._id%>"> Read More...</a></p>
                     </div>
                     <p>
                        <a class="btn btn-sm btn-primary text-white" href="/campgrounds/<%=camp._id%>">More</a>
