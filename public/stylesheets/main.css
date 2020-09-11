@@ -1,5 +1,6 @@
 .img-thumbnail img{
     width:100%;
+    height:180px;
     padding:0;
 }
 .img-thumbnail{
@@ -7,4 +8,7 @@
 }
 .caption-full{
     padding:10px;
+}
+#delete-form{
+    display:inline;
 }
