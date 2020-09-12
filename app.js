@@ -14,7 +14,11 @@ const express                 = require("express"),
           authRoutes     =require("./routes/auth"),
           campRoutes     =require("./routes/campground");
 
-mongoose.connect('mongodb://localhost:27017/campground', {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false});
+mongoose.connect('mongodb://localhost:27017/campground', {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true,useFindAndModify:false}).then(res=>{
+    console.log("DB Connected!")
+}).catch(err => {
+console.log(Error, err.message);
+})
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(__dirname+"/public"))
